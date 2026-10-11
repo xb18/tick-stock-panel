@@ -261,7 +261,7 @@ export function StrategySettingsDialog({ strategyId, onClose, onSaved, onAiModif
     }
     navs.push(
       { id: 'scoring', label: '评分权重', icon: Star, accent: 'text-amber-400', summary: `${Object.keys(scoring).length} 因子` },
-      { id: 'trading', label: '交易与触发', icon: TrendingUp, accent: 'text-emerald-400', summary: `入${entrySignals.length}·出${exitSignals.length}` },
+      { id: 'trading', label: '风控触发', icon: TrendingUp, accent: 'text-emerald-400', summary: `入${entrySignals.length}·出${exitSignals.length}` },
     )
     if (overlaySupported(detail)) {
       navs.push({ id: 'overlay', label: '叠加条件', icon: Filter, accent: 'text-sky-400', summary: overlayFilter.length > 0 ? `${overlayFilter.length} 条` : '未配置' })
@@ -720,8 +720,8 @@ export function StrategySettingsDialog({ strategyId, onClose, onSaved, onAiModif
                         />
                       </SettingsSection>
 
-                      {/* ── 交易与触发 ── */}
-                      <SettingsSection icon={TrendingUp} title="交易与触发" accent="text-emerald-400" summary={`入${entrySignals.length}·出${exitSignals.length}`} sectionRef={setSectionEl('trading')}>
+                      {/* ── 风控触发 ── */}
+                      <SettingsSection icon={TrendingUp} title="风控触发" accent="text-emerald-400" summary={`入${entrySignals.length}·出${exitSignals.length}`} sectionRef={setSectionEl('trading')}>
                         <div className="grid grid-cols-2 gap-x-6 gap-y-2">
                           <div className="flex items-center gap-1.5">
                             <span className="text-[11px] text-secondary w-12 shrink-0">止损</span>
